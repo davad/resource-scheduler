@@ -1,0 +1,42 @@
+#---------------------
+#    :: Event 
+#	-> controller
+#---------------------
+EventController =
+  # To trigger this action locally, visit: `http://localhost:port/event/resource`
+  resource: (req, res) ->
+    
+    # This will render the view: /Users/davad/Dropbox/Work/dmwl/explore/angular-sails-socketio-mongo-demo/views/event/resource.ejs
+    res.json(foo:"bar")
+
+  index: (req, res) ->
+    console.log "check"
+    Event.findAll().done (err, events) ->
+      if err
+        console.log err
+        res.json
+          error: "Error listing events"
+        , 500
+      else
+        response = []
+        #console.log events
+        for event in events
+          event = event.values
+          res_id = event._resource
+          ###
+          console.log "res_id: " + res_id
+          if res_id?
+            event = Resource.find(res_id).done (err, resource) ->
+              if err
+                console.log err
+              else
+                event._resource = resource.values
+                #console.log resource
+                console.log event
+                event
+                ###
+          response.push event
+
+        res.json response
+
+module.exports = EventController

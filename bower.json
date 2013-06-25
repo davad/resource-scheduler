@@ -1,0 +1,22 @@
+{
+  "name": "angular-sails-socketio-mongo-demo",
+  "version": "0.0.0",
+  "directory": "public/vendor",
+  "dependencies": {
+    "angular": "~1.0.7",
+    "angular-bootstrap": "~0.3",
+    "jquery-ui": "~1.10.3",
+    "angular-ui-calendar": "~0.1.3",
+    "fullcalendar": "~1.6.1",
+    "jquery": "~1.9.1",
+    "underscore": "~1.4.4",
+    "angular-cookies": "~1.0.7",
+    "angular-resource": "~1.0.7",
+    "angular-sanitize": "~1.0.7"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}

@@ -1,0 +1,16 @@
+<script type="text/ng-template" id="views/partials/calendar.html">
+<div class="span12">
+  <div class="alert-success calAlert"><pre>{{alertMessage}}</pre></div>
+    <div class="btn-toolbar">
+      <p class="pull-right lead">You can drag events below</p>
+      <div class="btn-group">
+        <button class="btn btn-info" ng-click="addRemoveEventSource(eventSources,eventSource)">Toggle an event source</button>
+        <button class="btn btn-success" ng-click="changeView('agendaDay')">AgendaDay</button>
+        <button class="btn btn-success" ng-click="changeView('agendaWeek')">AgendaWeek</button>
+        <button class="btn btn-success" ng-click="changeView('month')">Month</button>
+      </div>
+    </div>
+    <div class="calendar" ng-model="eventSources" config="uiConfig.calendar" ui-calendar="uiConfig.calendar"></div>
+  </div>
+</div>
+</script>
