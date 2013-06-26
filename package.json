@@ -1,5 +1,5 @@
 {
-    "name": "isaac-portfolio-2013",
+    "name": "resource-scheduler",
     "private": true,
     "version": "0.0.0-8",
     "description": "a Sails application",
@@ -15,15 +15,14 @@
         "asset-rack":""
     },
     "scripts": {
-        "start": "node .app.js",
-        "debug": "node debug .app.js"
+        "start": "node app.js",
+        "debug": "node debug app.js"
     },
-    "main": ".app.js",
+    "main": "app.js",
     "repository": "",
-    "author": "Isaac Wooten",
+    "author": "David Landry",
     "license": "MIT",
     "engines": {
-        "node": "0.8.x"
-    },
-    "subdomain": "levid-isaac-portfolio-2013"
+        "node": "0.10.x"
+    }
 }
